@@ -1,4 +1,6 @@
-/* FirstPage.css */
+/* =========================
+   FirstPage.css
+========================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -8,10 +10,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #f5f5f5;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .firstPage {
@@ -20,7 +31,9 @@ body {
   color: #111;
 }
 
-/* Navbar */
+/* =========================
+   Navbar
+========================= */
 
 .navbar {
   width: 100%;
@@ -29,9 +42,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
+  min-width: 42px;
   width: 42px;
   height: 42px;
   background: black;
@@ -47,14 +65,17 @@ body {
 
 .navLinks {
   display: flex;
+  align-items: center;
   gap: 40px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .navLinks li {
   font-size: 14px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .navLinks li:hover {
@@ -69,6 +90,8 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .primaryBtn:hover {
@@ -76,7 +99,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero */
+/* =========================
+   Hero Section
+========================= */
 
 .heroSection {
   display: grid;
@@ -102,6 +127,13 @@ body {
 .heroContent p {
   color: #666;
   margin-bottom: 30px;
+  line-height: 28px;
+  max-width: 600px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
 }
 
 .heroImage img {
@@ -110,7 +142,9 @@ body {
   object-fit: cover;
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 
 section {
   padding: 100px 80px;
@@ -120,6 +154,7 @@ section h2 {
   text-align: center;
   font-size: 42px;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .sectionText {
@@ -131,7 +166,9 @@ section h2 {
   line-height: 28px;
 }
 
-/* Trust Section */
+/* =========================
+   Trust Section
+========================= */
 
 .trustContent {
   display: grid;
@@ -146,10 +183,7 @@ section h2 {
   gap: 20px;
 }
 
-.trustImages img:nth-child(1) {
-  height: 220px;
-}
-
+.trustImages img:nth-child(1),
 .trustImages img:nth-child(2) {
   height: 220px;
 }
@@ -178,18 +212,22 @@ section h2 {
 
 .trustItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   color: #333;
   font-size: 15px;
+  line-height: 26px;
 }
 
-/* Stats */
+/* =========================
+   Stats
+========================= */
 
 .statsGrid {
   margin: 60px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   text-align: center;
 }
 
@@ -214,7 +252,9 @@ section h2 {
   transform: scale(1.01);
 }
 
-/* Partners */
+/* =========================
+   Partners
+========================= */
 
 .partnersGrid {
   display: grid;
@@ -225,7 +265,7 @@ section h2 {
 
 .partnerCard {
   background: white;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   border-radius: 10px;
   font-size: 22px;
@@ -236,10 +276,12 @@ section h2 {
 
 .partnerCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Blog */
+/* =========================
+   Blog
+========================= */
 
 .blogGrid {
   display: grid;
@@ -267,6 +309,7 @@ section h2 {
 .blogCard h4 {
   padding: 20px 20px 10px;
   font-size: 20px;
+  line-height: 30px;
 }
 
 .blogCard p {
@@ -287,7 +330,9 @@ section h2 {
   margin: 50px auto 0;
 }
 
-/* Testimonials */
+/* =========================
+   Testimonials
+========================= */
 
 .testimonialWrapper {
   display: flex;
@@ -297,6 +342,7 @@ section h2 {
 
 .arrowBtn {
   width: 45px;
+  min-width: 45px;
   height: 45px;
   border-radius: 50%;
   border: none;
@@ -327,6 +373,7 @@ section h2 {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .userInfo h4 {
@@ -338,7 +385,9 @@ section h2 {
   font-size: 14px;
 }
 
-/* FAQ */
+/* =========================
+   FAQ
+========================= */
 
 .faqSection {
   display: grid;
@@ -369,6 +418,7 @@ section h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .faqItem p {
@@ -381,7 +431,9 @@ section h2 {
   border-left: 4px solid black;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .ctaSection {
   margin: 80px;
@@ -392,6 +444,7 @@ section h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .ctaSection h2 {
@@ -406,9 +459,13 @@ section h2 {
   padding: 14px 35px;
   cursor: pointer;
   font-weight: 600;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 .footer {
   background: white;
@@ -432,11 +489,17 @@ section h2 {
   margin-bottom: 14px;
   color: #666;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.footerLinks p:hover {
+  color: #111;
 }
 
 .socialIcons {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .socialIcons span {
@@ -447,10 +510,37 @@ section h2 {
   cursor: pointer;
 }
 
-/* Responsive */
+/* =========================
+   Large Laptop
+========================= */
+
+@media (max-width: 1200px) {
+  .navbar,
+  section,
+  .footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .heroContent {
+    padding: 60px;
+  }
+
+  .heroContent h1 {
+    font-size: 52px;
+    line-height: 65px;
+  }
+
+  .partnersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
 
 @media (max-width: 992px) {
-
   .navbar {
     padding: 20px 30px;
   }
@@ -465,16 +555,35 @@ section h2 {
 
   .heroSection,
   .trustContent,
-  .faqSection,
-  .footer,
-  .blogGrid,
-  .partnersGrid,
-  .statsGrid {
+  .faqSection {
     grid-template-columns: 1fr;
+  }
+
+  .blogGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partnersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 30px;
   }
 
   .heroContent {
     padding: 60px 30px;
+    order: 2;
+  }
+
+  .heroImage {
+    order: 1;
+    height: 500px;
   }
 
   .heroContent h1 {
@@ -490,7 +599,6 @@ section h2 {
     margin: 30px;
     padding: 40px 30px;
     flex-direction: column;
-    gap: 30px;
     text-align: center;
   }
 
@@ -498,8 +606,140 @@ section h2 {
     text-align: center;
   }
 
-  .footer {
-    padding: 50px 30px;
+  .faqImage img {
+    height: 400px;
   }
 
+  .bigImage img {
+    height: 450px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 20px;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .primaryBtn,
+  .whiteBtn {
+    width: 100%;
+  }
+
+  .heroSection {
+    min-height: auto;
+  }
+
+  .heroContent {
+    padding: 50px 20px;
+  }
+
+  .heroContent h1 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  section h2 {
+    font-size: 32px;
+  }
+
+  .sectionText {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .trustImages {
+    grid-template-columns: 1fr;
+  }
+
+  .trustImages img:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .trustImages img {
+    height: 250px !important;
+  }
+
+  .statsGrid,
+  .partnersGrid,
+  .blogGrid,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .blogCard img {
+    height: 220px;
+  }
+
+  .testimonialCard {
+    padding: 25px;
+  }
+
+  .faqSection {
+    gap: 40px;
+  }
+
+  .faqImage img {
+    height: 300px;
+  }
+
+  .bigImage img {
+    height: 300px;
+  }
+
+  .ctaSection {
+    margin: 20px;
+    padding: 35px 20px;
+  }
+
+  .footer {
+    padding: 50px 20px;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  .statsGrid h3 {
+    font-size: 32px;
+  }
+
+  .partnerCard {
+    padding: 30px 15px;
+    font-size: 18px;
+  }
+
+  .blogCard h4 {
+    font-size: 18px;
+  }
+
+  .faqItem {
+    padding: 20px;
+  }
+
+  .testimonialCard {
+    padding: 20px;
+  }
+
+  .ctaSection h2 {
+    font-size: 28px;
+  }
 }
